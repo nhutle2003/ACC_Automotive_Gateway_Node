@@ -71,4 +71,4 @@ Phần mô phỏng ACC và giao diện Matlab được thực hiện bởi các 
 ---
 
 ## 🎥 Video Demo 
-- Video demo: (thêm link YouTube/Drive)
+- Video demo: https://drive.google.com/file/d/19ns-zEEYxKTt7lhtvhN1aRVujSTEGcxB/view?usp=drive_link
