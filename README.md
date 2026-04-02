@@ -49,7 +49,7 @@ Phạm vi toàn bộ đề tài bao gồm:
 ---
 
 ## Vai trò thực hiện
-
+Đồ án được thực hiện theo nhóm 3 thành viên.
 Tôi phụ trách phát triển phần mềm nhúng trên STM32, bao gồm:
 
 - Xây dựng firmware điều khiển cho mô hình bướm ga điện tử
