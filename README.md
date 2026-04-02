@@ -1,75 +1,77 @@
-# MÔ HÌNH ĐIỀU KHIỂN BƯỚM GA ĐIỆN TỬ TÍCH HỢP ACC VÀ CAN BUS
+# Electronic Throttle Control Model with ACC and CAN Bus
 
-## 📌 Giới thiệu
+## Giới thiệu
 
-Đề tài tập trung thiết kế và xây dựng mô hình điều khiển bướm ga điện tử (Electronic Throttle Control - ETC) phục vụ giảng dạy, tích hợp mô phỏng hệ thống kiểm soát hành trình thích ứng (Adaptive Cruise Control - ACC) sử dụng Simulink và giao tiếp CAN Bus.
+Đề tài xây dựng mô hình điều khiển bướm ga điện tử (Electronic Throttle Control - ETC) tích hợp mô phỏng Adaptive Cruise Control (ACC) và giao tiếp CAN Bus.
 
-Mục tiêu của đề tài là xây dựng một hệ thống hoàn chỉnh kết hợp giữa mô phỏng phần mềm và phần cứng thực tế, giúp sinh viên tiếp cận hệ thống điều khiển điện tử trong ô tô hiện đại.
+Hệ thống kết hợp phần mềm nhúng trên STM32 với phần mô phỏng trên máy tính nhằm minh họa cách các hệ thống điều khiển điện tử trong ô tô hiện đại trao đổi dữ liệu giữa các node ECU và công cụ giám sát bên ngoài. Đề tài được thực hiện với mục tiêu học tập, mô phỏng thực tế và hỗ trợ giảng dạy.
 
 ---
 
-## 🛠 Công nghệ và nền tảng sử dụng
+## Công nghệ và nền tảng sử dụng
 
 - Vi điều khiển STM32
 - Giao tiếp CAN Bus (mô hình 3 node)
-- Matlab/Simulink
-- Matlab App Designer (giao diện điều khiển)
+- MATLAB / Simulink
+- MATLAB App Designer
 - PWM điều khiển động cơ DC
 - Cảm biến vị trí bướm ga (TPS)
 - Driver H-Bridge
 
 ---
 
-## ⚙ Kiến trúc hệ thống
+## Kiến trúc hệ thống
 
-Hệ thống bao gồm:
+Hệ thống tổng thể bao gồm:
 
-- Node điều khiển trung tâm (MCU STM32)
+- Node điều khiển trung tâm sử dụng STM32
 - Node giao tiếp CAN
-- Node mô phỏng ACC trên Simulink
+- Node mô phỏng ACC xây dựng trên Simulink
 - Cơ cấu bướm ga điện tử
-- Giao diện điều khiển và giám sát trên Matlab App
+- Giao diện giám sát và điều khiển trên MATLAB
 
-Dữ liệu tốc độ và góc mở bướm ga được truyền qua CAN và hiển thị trực quan trên giao diện máy tính.
+Dữ liệu tốc độ xe và góc mở bướm ga được truyền qua CAN Bus và hiển thị trên giao diện máy tính theo thời gian thực.
 
 ---
 
-## 🔎 Nội dung thực hiện
+## Phạm vi đề tài
 
-- Thiết kế thuật toán điều khiển bướm ga
-- Xử lý tín hiệu cảm biến TPS
+Phạm vi toàn bộ đề tài bao gồm:
+
+- Thuật toán điều khiển bướm ga điện tử
+- Đọc và xử lý tín hiệu cảm biến TPS
 - Điều khiển động cơ bằng PWM
-- Thiết lập và cấu hình giao tiếp CAN giữa các node
-- Xây dựng mô hình ACC trên Simulink
-- Thiết kế giao diện giám sát và điều khiển
-- Kiểm thử và hiệu chỉnh hệ thống thực tế
+- Giao tiếp CAN giữa nhiều node
+- Mô phỏng ACC trên Simulink
+- Giao diện giám sát và điều khiển trên máy tính
+- Kiểm thử và hiệu chỉnh hệ thống
 
 ---
 
-## 👨‍💻 Vai trò thực hiện
+## Vai trò thực hiện
 
-Trong đề tài, tôi phụ trách phát triển phần mềm nhúng trên vi điều khiển STM32, bao gồm:
+Tôi phụ trách phát triển phần mềm nhúng trên STM32, bao gồm:
 
-- Thiết kế và lập trình thuật toán điều khiển bướm ga điện tử
-- Đọc và xử lý tín hiệu cảm biến vị trí bướm ga (TPS)
+- Xây dựng firmware điều khiển cho mô hình bướm ga điện tử
+- Đọc và xử lý tín hiệu từ cảm biến vị trí bướm ga (TPS)
 - Điều khiển động cơ DC bằng PWM thông qua H-Bridge
-- Xây dựng và cấu hình giao tiếp CAN giữa các node
-- Xử lý truyền nhận dữ liệu và đảm bảo hệ thống hoạt động ổn định
+- Cấu hình và xử lý giao tiếp CAN giữa các node
+- Xử lý dữ liệu truyền nhận để hệ thống hoạt động ổn định
 
-Phần mô phỏng ACC và giao diện Matlab được thực hiện bởi các thành viên khác trong nhóm.
-
----
-
-## 📊 Kết quả đạt được
-
-- Mô hình hoạt động ổn định, sai số nhỏ
-- Góc mở bướm ga bám theo giá trị đặt
-- Truyền nhận dữ liệu CAN chính xác
-- Giao diện giám sát hiển thị dữ liệu thời gian thực
-- Phù hợp phục vụ giảng dạy và thực hành hệ thống điều khiển ô tô
+Phần mô phỏng ACC và giao diện MATLAB được thực hiện bởi các thành viên khác trong nhóm.
 
 ---
 
-## 🎥 Video Demo
-[Watch the demo video](https://drive.google.com/file/d/19ns-zEEYxKTt7lhtvhN1aRVujSTEGcxB/view?usp=drive_link)
+## Kết quả đạt được
 
+- Mô hình ETC hoạt động ổn định với sai số nhỏ
+- Góc mở bướm ga bám theo giá trị đặt tương đối tốt
+- Dữ liệu CAN được truyền nhận ổn định giữa các node
+- Giao diện giám sát hiển thị dữ liệu theo thời gian thực
+- Mô hình phù hợp cho mục đích giảng dạy và mô phỏng hệ thống điều khiển ô tô
+
+---
+
+## Video Demo
+
+[Xem video demo](https://drive.google.com/file/d/19ns-zEEYxKTt7lhtvhN1aRVujSTEGcxB/view?usp=drive_link)
